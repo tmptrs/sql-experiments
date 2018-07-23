@@ -1,0 +1,12 @@
+﻿SELECT  city.name, country.name from city
+INNER JOIN country
+ON city.countrycode = country.code
+WHERE country.name = 'Netherlands'
+ORDER BY city.name;
+
+SELECT country.name, countrylanguage.language, countrylanguage.percentage
+FROM countrylanguage
+INNER JOIN country
+ON countrylanguage.countrycode = country.code
+WHERE country.name LIKE 'N%'
+ORDER BY country.name;
